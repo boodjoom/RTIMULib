@@ -170,12 +170,12 @@ int main()
                 printf("%s, Heading: %6.1f Heading Ave: %6.1f\n", ismoving ? "IMU is moving" : "IMU is still ", RTMATH_RAD_TO_DEGREE * heading, RTMATH_RAD_TO_DEGREE * heading_avg);
                 printf("%s", RTMath::display("Quaternion", imuData.fusionQPose));
                 printf("%s", RTMath::displayDegrees("Pose ", imuData.fusionPose));
-                printf("%s", RTMath::displayRadians("Accel", imuData.accel));
-                printf("%s", RTMath::displayRadians("Gyro ", imuData.gyro));
-                printf("%s", RTMath::displayRadians("Mag  ", imuData.compass));
-                printf("%s", RTMath::displayRadians("Residuals     ", residuals));
+                printf("%s", RTMath::displayDegrees("Accel", imuData.accel));
+                printf("%s", RTMath::displayDegrees("Gyro ", imuData.gyro));
+                printf("%s", RTMath::displayDegrees("Mag  ", imuData.compass));
+                printf("%s", RTMath::displayDegrees("Residuals     ", residuals));
                 RTVector3 residualsBias = motion->getResidualsBias();
-                printf("%s", RTMath::displayRadians("Residuals Bias", residualsBias));
+                printf("%s", RTMath::displayDegrees("Residuals Bias", residualsBias));
 
                 if (pressure != NULL) {
                     printf("Pressure: %4.1f, height above sea level: %4.1f, depth below sea level: %4.1f\n",
@@ -192,11 +192,11 @@ int main()
                 if (humidity != NULL) { printf(", Humidity Sensor %4.1f", imuData.humidityTemperature); }
                 printf("\n");
 
-                printf("%s", RTMath::displayRadians("World Accel   ", motionData.worldAcceleration));
-                printf("%s", RTMath::displayRadians("World Velocity", motionData.worldVelocity));
-                printf("%s", RTMath::displayRadians("World Velocity Drift", motionData.worldVelocityDrift));
-                printf("%s", RTMath::displayRadians("World Position", motionData.worldPosition));
-                printf("%s", RTMath::displayRadians("Local Residuals", motionData.residuals));
+                printf("%s", RTMath::displayDegrees("World Accel   ", motionData.worldAcceleration));
+                printf("%s", RTMath::displayDegrees("World Velocity", motionData.worldVelocity));
+                printf("%s", RTMath::displayDegrees("World Velocity Drift", motionData.worldVelocityDrift));
+                printf("%s", RTMath::displayDegrees("World Position", motionData.worldPosition));
+                printf("%s", RTMath::displayDegrees("Local Residuals", motionData.residuals));
 
                 printf("Timestamp: %" PRIu64 "\n", imuData.timestamp);
                 printf(" a-p-z-m-M-x----------- \n");
@@ -233,8 +233,8 @@ int main()
                     break;
                 case 'A' :
                     keystatus[1] ='-';
-                    sprintf(sysstatus1, "%s", RTMath::displayRadians("Acc Cal Max ", settings->m_accelCalMax));
-                    sprintf(sysstatus2, "%s", RTMath::displayRadians("Acc Cal Min ", settings->m_accelCalMin));
+                    sprintf(sysstatus1, "%s", RTMath::displayDegrees("Acc Cal Max ", settings->m_accelCalMax));
+                    sprintf(sysstatus2, "%s", RTMath::displayDegrees("Acc Cal Min ", settings->m_accelCalMin));
                     break;
                 case 'p' :
                     keystatus[1] ='-';
