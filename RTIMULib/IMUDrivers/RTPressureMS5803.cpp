@@ -168,7 +168,7 @@ void RTPressureMS5803::pressureBackground()
                 sens2 =  sens2    + 4 * ((temperature + 1500) * (temperature + 1500));
             }
         } else { // above 20C
-            T2 = 7 * ((uint64_t)deltaT * deltaT)/pow(2,37); 
+            T2 = 7 * ((uint64_t)deltaT * deltaT)/((uint64_t)pow(2.0,37.0));
             offset2 = (temperature - 2000) * (temperature - 2000) / 16;
             sens2 = 0;
         }

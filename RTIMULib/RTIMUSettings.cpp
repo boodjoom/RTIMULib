@@ -690,454 +690,454 @@ bool RTIMUSettings::loadSettings()
 
         if (strcmp(key, RTIMULIB_IMU_TYPE) == 0) {
             m_imuType = atoi(val);
-        } else if (strcmp(key, RTIMULIB_FUSION_TYPE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_FUSION_TYPE) == 0) {
             m_fusionType = atoi(val);
-        } else if (strcmp(key, RTIMULIB_FUSION_DEBUG) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_FUSION_DEBUG) == 0) {
            m_fusionDebug = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_BUS_IS_I2C) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BUS_IS_I2C) == 0) {
             m_busIsI2C = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_I2C_BUS) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_I2C_BUS) == 0) {
             m_I2CBus = atoi(val);
-        } else if (strcmp(key, RTIMULIB_SPI_BUS) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_SPI_BUS) == 0) {
             m_SPIBus = atoi(val);
-        } else if (strcmp(key, RTIMULIB_SPI_SELECT) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_SPI_SELECT) == 0) {
             m_SPISelect = atoi(val);
-        } else if (strcmp(key, RTIMULIB_SPI_SPEED) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_SPI_SPEED) == 0) {
             m_SPISpeed = atoi(val);
-        } else if (strcmp(key, RTIMULIB_I2C_SLAVEADDRESS) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_I2C_SLAVEADDRESS) == 0) {
             m_I2CSlaveAddress = atoi(val);
-        } else if (strcmp(key, RTIMULIB_AXIS_ROTATION) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_AXIS_ROTATION) == 0) {
             m_axisRotation = atoi(val);
-        } else if (strcmp(key, RTIMULIB_PRESSURE_TYPE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_PRESSURE_TYPE) == 0) {
             m_pressureType = atoi(val);
-        } else if (strcmp(key, RTIMULIB_I2C_PRESSUREADDRESS) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_I2C_PRESSUREADDRESS) == 0) {
             m_I2CPressureAddress = atoi(val);
-        } else if (strcmp(key, RTIMULIB_HUMIDITY_TYPE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_HUMIDITY_TYPE) == 0) {
             m_humidityType = atoi(val);
-        } else if (strcmp(key, RTIMULIB_I2C_HUMIDITYADDRESS) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_I2C_HUMIDITYADDRESS) == 0) {
             m_I2CHumidityAddress = atoi(val);
 
         // temperature bias calibration
 		// c3 temp^3 + c2 temp^2 + c1 temp + c0
 		// for acc_x,y,z gyro_x,y,z comp_x,y,z
 
-        } else if (strcmp(key, RTIMULIB_TEMP_BREAK ) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMP_BREAK ) == 0) {
 		    sscanf(val, "%f", &ftemp);
             m_senTemp_break = ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_VALID) == 0) {
             m_temperatureCalValid = strcmp(val, "true") == 0;
 
-		} else if (strcmp(key, RTIMULIB_TEMPCAL_C0_0) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_0) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[0]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_1) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_1) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[1]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_2) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_2) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[2]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_3) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_3) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[3]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_4) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_4) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[4]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_5) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_5) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[5]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_6) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_6) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[6]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_7) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_7) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[7]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C0_8) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C0_8) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c0[8]=ftemp;
 			
-		} else if (strcmp(key, RTIMULIB_TEMPCAL_C1_0) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_0) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[0]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_1) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_1) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[1]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_2) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_2) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[2]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_3) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_3) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[3]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_4) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_4) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[4]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_5) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_5) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[5]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_6) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_6) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[6]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_7) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_7) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[7]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C1_8) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C1_8) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c1[8]=ftemp;
 			
-		} else if (strcmp(key, RTIMULIB_TEMPCAL_C2_0) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_0) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[0]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_1) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_1) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[1]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_2) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_2) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[2]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_3) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_3) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[3]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_4) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_4) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[4]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_5) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_5) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[5]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_6) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_6) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[6]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_7) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_7) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[7]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C2_8) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C2_8) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c2[8]=ftemp;
 			
-		} else if (strcmp(key, RTIMULIB_TEMPCAL_C3_0) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_0) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[0]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_1) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_1) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[1]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_2) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_2) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[2]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_3) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_3) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[3]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_4) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_4) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[4]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_5) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_5) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[5]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_6) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_6) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[6]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_7) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_7) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[7]=ftemp;
-        } else if (strcmp(key, RTIMULIB_TEMPCAL_C3_8) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_TEMPCAL_C3_8) == 0) {
             sscanf(val, "%f", &ftemp);
             m_c3[8]=ftemp;
 			
         // compass calibration and adjustment
 
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_VALID) == 0) {
             m_compassCalValid = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MINX) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MINX) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMin.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MINY) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MINY) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMin.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MINZ) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MINZ) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMin.setZ(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MAXX) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MAXX) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMax.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MAXY) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MAXY) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMax.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_MAXZ) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_MAXZ) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalMax.setZ(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSADJ_DECLINATION) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSADJ_DECLINATION) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassAdjDeclination = ftemp;
 
         // compass ellipsoid calibration
 
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_ELLIPSOID_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_ELLIPSOID_VALID) == 0) {
             m_compassCalEllipsoidValid = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_X) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_X) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidOffset.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_Y) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_Y) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidOffset.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_Z) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_OFFSET_Z) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidOffset.setZ(ftemp);
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR11) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR11) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[0][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR12) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR12) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[0][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR13) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR13) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[0][2] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR21) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR21) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[1][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR22) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR22) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[1][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR23) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR23) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[1][2] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR31) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR31) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[2][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR32) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR32) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[2][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_COMPASSCAL_CORR33) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_COMPASSCAL_CORR33) == 0) {
             sscanf(val, "%f", &ftemp);
             m_compassCalEllipsoidCorr[2][2] = ftemp;
 
         // accel calibration
 
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_VALID) == 0) {
             m_accelCalValid = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MINX) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MINX) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMin.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MINY) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MINY) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMin.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MINZ) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MINZ) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMin.setZ(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MAXX) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MAXX) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMax.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MAXY) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MAXY) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMax.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_MAXZ) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_MAXZ) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalMax.setZ(ftemp);
 
         // accel ellipsoid calibration
            
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_ELLIPSOID_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_ELLIPSOID_VALID) == 0) {
              m_accelCalEllipsoidValid = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_X) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_X) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidOffset.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_Y) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_Y) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidOffset.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_Z) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_OFFSET_Z) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidOffset.setZ(ftemp);
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR11) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR11) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[0][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR12) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR12) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[0][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR13) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR13) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[0][2] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR21) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR21) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[1][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR22) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR22) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[1][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR23) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR23) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[1][2] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR31) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR31) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[2][0] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR32) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR32) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[2][1] = ftemp;
-        } else if (strcmp(key, RTIMULIB_ACCELCAL_CORR33) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_ACCELCAL_CORR33) == 0) {
             sscanf(val, "%f", &ftemp);
             m_accelCalEllipsoidCorr[2][2] = ftemp;
 
         // gyro bias
 
-        } else if (strcmp(key, RTIMULIB_GYRO_BIAS_VALID) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GYRO_BIAS_VALID) == 0) {
             m_gyroBiasValid = strcmp(val, "true") == 0;
-        } else if (strcmp(key, RTIMULIB_GYRO_BIAS_X) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GYRO_BIAS_X) == 0) {
             sscanf(val, "%f", &ftemp);
             m_gyroBias.setX(ftemp);
-        } else if (strcmp(key, RTIMULIB_GYRO_BIAS_Y) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GYRO_BIAS_Y) == 0) {
             sscanf(val, "%f", &ftemp);
             m_gyroBias.setY(ftemp);
-        } else if (strcmp(key, RTIMULIB_GYRO_BIAS_Z) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GYRO_BIAS_Z) == 0) {
             sscanf(val, "%f", &ftemp);
             m_gyroBias.setZ(ftemp);
 
         //  MPU9150 settings
 
-        } else if (strcmp(key, RTIMULIB_MPU9150_GYROACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9150_GYROACCEL_SAMPLERATE) == 0) {
             m_MPU9150GyroAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9150_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9150_COMPASS_SAMPLERATE) == 0) {
             m_MPU9150CompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9150_GYROACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9150_GYROACCEL_LPF) == 0) {
             m_MPU9150GyroAccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9150_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9150_GYRO_FSR) == 0) {
             m_MPU9150GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9150_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9150_ACCEL_FSR) == 0) {
             m_MPU9150AccelFsr = atoi(val);
 
         //  MPU9250 settings
 
-        } else if (strcmp(key, RTIMULIB_MPU9250_GYROACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_GYROACCEL_SAMPLERATE) == 0) {
             m_MPU9250GyroAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9250_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_COMPASS_SAMPLERATE) == 0) {
             m_MPU9250CompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9250_GYRO_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_GYRO_LPF) == 0) {
             m_MPU9250GyroLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9250_ACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_ACCEL_LPF) == 0) {
             m_MPU9250AccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9250_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_GYRO_FSR) == 0) {
             m_MPU9250GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9250_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9250_ACCEL_FSR) == 0) {
             m_MPU9250AccelFsr = atoi(val);
 
         //  MPU9255 settings
 		
-        } else if (strcmp(key, RTIMULIB_MPU9255_GYROACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_GYROACCEL_SAMPLERATE) == 0) {
             m_MPU9255GyroAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9255_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_COMPASS_SAMPLERATE) == 0) {
             m_MPU9255CompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9255_GYRO_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_GYRO_LPF) == 0) {
             m_MPU9255GyroLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9255_ACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_ACCEL_LPF) == 0) {
             m_MPU9255AccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9255_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_GYRO_FSR) == 0) {
             m_MPU9255GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_MPU9255_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_MPU9255_ACCEL_FSR) == 0) {
             m_MPU9255AccelFsr = atoi(val);
 			
         //  GD20HM303D settings
 		
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_SAMPLERATE) == 0) {
             m_GD20HM303DGyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_FSR) == 0) {
             m_GD20HM303DGyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_HPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_HPF) == 0) {
             m_GD20HM303DGyroHpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_BW) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_GYRO_BW) == 0) {
             m_GD20HM303DGyroBW = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_SAMPLERATE) == 0) {
             m_GD20HM303DAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_FSR) == 0) {
             m_GD20HM303DAccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_ACCEL_LPF) == 0) {
             m_GD20HM303DAccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_COMPASS_SAMPLERATE) == 0) {
             m_GD20HM303DCompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303D_COMPASS_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303D_COMPASS_FSR) == 0) {
             m_GD20HM303DCompassFsr = atoi(val);
 
         //  GD20M303DLHC settings
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_SAMPLERATE) == 0) {
             m_GD20M303DLHCGyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_FSR) == 0) {
             m_GD20M303DLHCGyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_HPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_HPF) == 0) {
             m_GD20M303DLHCGyroHpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_BW) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_GYRO_BW) == 0) {
             m_GD20M303DLHCGyroBW = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_ACCEL_SAMPLERATE) == 0) {
             m_GD20M303DLHCAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_ACCEL_FSR) == 0) {
             m_GD20M303DLHCAccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_COMPASS_SAMPLERATE) == 0) {
             m_GD20M303DLHCCompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20M303DLHC_COMPASS_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20M303DLHC_COMPASS_FSR) == 0) {
             m_GD20M303DLHCCompassFsr = atoi(val);
 
         //  GD20HM303DLHC settings
 
-         } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_SAMPLERATE) == 0) {
+         continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_SAMPLERATE) == 0) {
             m_GD20HM303DLHCGyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_FSR) == 0) {
             m_GD20HM303DLHCGyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_HPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_HPF) == 0) {
             m_GD20HM303DLHCGyroHpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_BW) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_GYRO_BW) == 0) {
             m_GD20HM303DLHCGyroBW = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_ACCEL_SAMPLERATE) == 0) {
             m_GD20HM303DLHCAccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_ACCEL_FSR) == 0) {
             m_GD20HM303DLHCAccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_COMPASS_SAMPLERATE) == 0) {
             m_GD20HM303DLHCCompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_GD20HM303DLHC_COMPASS_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_GD20HM303DLHC_COMPASS_FSR) == 0) {
             m_GD20HM303DLHCCompassFsr = atoi(val);
 
         //  LSM9DS0 settings
 
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_SAMPLERATE) == 0) {
             m_LSM9DS0GyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_FSR) == 0) {
             m_LSM9DS0GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_HPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_HPF) == 0) {
             m_LSM9DS0GyroHpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_BW) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_GYRO_BW) == 0) {
             m_LSM9DS0GyroBW = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_SAMPLERATE) == 0) {
             m_LSM9DS0AccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_FSR) == 0) {
             m_LSM9DS0AccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_ACCEL_LPF) == 0) {
             m_LSM9DS0AccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_COMPASS_SAMPLERATE) == 0) {
             m_LSM9DS0CompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS0_COMPASS_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS0_COMPASS_FSR) == 0) {
             m_LSM9DS0CompassFsr = atoi(val);
 
         //  LSM9DS1 settings
 
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_SAMPLERATE) == 0) {
             m_LSM9DS1GyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_FSR) == 0) {
             m_LSM9DS1GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_HPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_HPF) == 0) {
             m_LSM9DS1GyroHpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_BW) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_GYRO_BW) == 0) {
             m_LSM9DS1GyroBW = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_SAMPLERATE) == 0) {
             m_LSM9DS1AccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_FSR) == 0) {
             m_LSM9DS1AccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_LPF) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_ACCEL_LPF) == 0) {
             m_LSM9DS1AccelLpf = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_COMPASS_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_COMPASS_SAMPLERATE) == 0) {
             m_LSM9DS1CompassSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_LSM9DS1_COMPASS_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_LSM9DS1_COMPASS_FSR) == 0) {
             m_LSM9DS1CompassFsr = atoi(val);
 
         //  BMX055 settings
 
-        } else if (strcmp(key, RTIMULIB_BMX055_GYRO_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BMX055_GYRO_SAMPLERATE) == 0) {
             m_BMX055GyroSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_BMX055_GYRO_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BMX055_GYRO_FSR) == 0) {
             m_BMX055GyroFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_BMX055_ACCEL_SAMPLERATE) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BMX055_ACCEL_SAMPLERATE) == 0) {
             m_BMX055AccelSampleRate = atoi(val);
-        } else if (strcmp(key, RTIMULIB_BMX055_ACCEL_FSR) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BMX055_ACCEL_FSR) == 0) {
             m_BMX055AccelFsr = atoi(val);
-        } else if (strcmp(key, RTIMULIB_BMX055_MAG_PRESET) == 0) {
+        continue; } if (strcmp(key, RTIMULIB_BMX055_MAG_PRESET) == 0) {
             m_BMX055MagPreset = atoi(val);
 
         //  Handle unrecognized key
